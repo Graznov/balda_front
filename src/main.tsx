@@ -1,28 +1,26 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import Registr from "./components/Registr/Registr.tsx";
-import {LogInWind} from "./components/Registr/LogInWind/LogInWind.tsx";
-import {NewAccount} from "./components/Registr/NewAccount/NewAccount.tsx";
 import {Provider} from "react-redux";
 import React from "react";
 import {store} from "./Store/store.ts";
+import Field from "./Field/Field.tsx";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Registr/>,
+        element: <Field/>,
         // errorElement:<ErrorPage/>,
         children:[
-            {
-                path:"/newaccount",
-                // index,
-                element: <NewAccount/>
-            },
-            {
-                path:"/login",
-                element: <LogInWind/>
-            },
+            // {
+            //     path:"/newaccount",
+            //     // index,
+            //     element: <NewAccount/>
+            // },
+            // {
+            //     path:"/login",
+            //     element: <LogInWind/>
+            // },
         ]
     },
     // {
