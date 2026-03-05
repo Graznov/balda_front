@@ -5,6 +5,7 @@ import {Provider} from "react-redux";
 import React from "react";
 import {store} from "./Store/store.ts";
 import Field from "./Field/Field.tsx";
+import Battlefield from "./Field/BattleField/Battlefield.tsx";
 
 const router = createBrowserRouter([
     {
@@ -12,11 +13,11 @@ const router = createBrowserRouter([
         element: <Field/>,
         // errorElement:<ErrorPage/>,
         children:[
-            // {
-            //     path:"/newaccount",
-            //     // index,
-            //     element: <NewAccount/>
-            // },
+            {
+                path:"/playarea",
+                // index,
+                element: <Battlefield/>
+            },
             // {
             //     path:"/login",
             //     element: <LogInWind/>

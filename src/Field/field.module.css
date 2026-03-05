@@ -32,37 +32,9 @@
     --color-gray-font: gray;
 }
 
-
-.registr_container{
-
-
+.field{
+    background-color: var(--color-w-bg);
     height: 100vh;
-
-    font-family: "Inter", sans-serif;
-
-    background: var(--color-w-bg);
-
-    margin: 0px auto;
-    display: flex;
-
-    .registr_container_left{
-
-        width: 55vw;
-        height: 90vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        .input_area_Zag{
-            width: 80%;
-            margin: 10px auto;
-            font-family: "Inter", sans-serif;
-            font-size: 25px;
-            font-weight: 600;
-        }
-
-    }
-
 }
 
 .registr_container_dark{
@@ -71,26 +43,5 @@
 
 
 @media screen and (min-width:60px) and (max-width:770px){
-    .registr_container{
 
-        .classNameInput{
-            width: 70vw;
-            margin: 0 auto;
-        }
-
-        .input_area{
-            /*text-align: center;*/
-            padding: 0;
-            /*width: 70vw;*/
-
-        }
-
-        .registr_container_right{
-            display: none;
-        }
-        .registr_container_left{
-            width: 100vw;
-            height: 0;
-        }
-    }
 }
