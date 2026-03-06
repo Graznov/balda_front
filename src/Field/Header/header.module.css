@@ -1,6 +1,32 @@
 .header{
     width: 100%;
-    background: red;
+    background: var(--color-w-inputHead);
+    padding: 10px 0;
+
+    .container_width{
+        max-width: 900px;
+        margin: 0 auto;
+
+        border-left: 1px solid red;
+        border-right: 1px solid red;
+
+        display: flex;
+        justify-content: space-between;
+
+        .header__list{
+
+            display: flex;
+            gap: 15px;
+            li{
+                list-style-type: none; /* Убирает маркеры */
+                padding: 0;            /* Убирает левый отступ (для всех браузеров) */
+                margin: 0;
+            }
+
+        }
+    }
+
+
 
     .link{
         text-decoration: none;

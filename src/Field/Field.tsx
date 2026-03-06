@@ -1,6 +1,6 @@
 import classNames from "classnames/bind";
 import styles from './field.module.css'
-import {NavLink, Outlet} from "react-router-dom";
+import {Outlet} from "react-router-dom";
 import Header from "./Header/Header.tsx";
 
 
@@ -13,17 +13,13 @@ function Field(){
     return(
         <div className={cx('field')}>
 
-            <div><Header/></div>
-
-            <div>
-                <div>
-                    {/*<TopCont/>*/} FIELD
-                    <NavLink to='/playarea'>start game</NavLink>
-                </div>
+            <div className="container_width">
+                <Header/>
 
                 <Outlet/>
 
             </div>
+
 
         </div>
     )

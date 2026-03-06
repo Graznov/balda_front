@@ -11,38 +11,48 @@ function Header(){
     return(
         <div className={cx('header')}>
 
-            <ul>
-                <li>
-                    <LinkCastom
-                        Link_path={'/'}
-                        Link_ClassName={linksStyle}
-                        Link_text={'One'}/>
-                </li>
-                <li>
-                    <LinkCastom
-                        Link_path={'/'}
-                        Link_ClassName={linksStyle}
-                        Link_text={'Two'}/>
-                </li>
-                <li>
-                    <LinkCastom
-                        Link_path={'/'}
-                        Link_ClassName={linksStyle}
-                        Link_text={'Three'}/>
-                </li>
-                <li>
-                    <LinkCastom
-                        Link_path={'/'}
-                        Link_ClassName={linksStyle}
-                        Link_text={'Four'}/>
-                </li>
-                <li>
-                    <LinkCastom
-                        Link_path={'/'}
-                        Link_ClassName={linksStyle}
-                        Link_text={'Five'}/>
-                </li>
-            </ul>
+            <div className={cx("container_width")}>
+
+                <ul className={cx('header__list')}>
+                    <li>
+                        <LinkCastom
+                            Link_path={'/playarea'}
+                            Link_ClassName={linksStyle}
+                            Link_text={'Start'}/>
+                    </li>
+                    <li>
+                        <LinkCastom
+                            Link_path={'/'}
+                            Link_ClassName={linksStyle}
+                            Link_text={'Two'}/>
+                    </li>
+                    <li>
+                        <LinkCastom
+                            Link_path={'/'}
+                            Link_ClassName={linksStyle}
+                            Link_text={'Three'}/>
+                    </li>
+                    <li>
+                        <LinkCastom
+                            Link_path={'/'}
+                            Link_ClassName={linksStyle}
+                            Link_text={'Four'}/>
+                    </li>
+                    <li>
+                        <LinkCastom
+                            Link_path={'/'}
+                            Link_ClassName={linksStyle}
+                            Link_text={'Пять'}/>
+                    </li>
+                </ul>
+
+                <LinkCastom
+                    Link_text={'User'}
+                    Link_path={'/user'}
+                    Link_ClassName={linksStyle}/>
+
+            </div>
+
 
         </div>
     )

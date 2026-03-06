@@ -32,14 +32,27 @@
     --color-gray-font: gray;
 }
 
+
+
 .field{
+    font-family: "Comfortaa", sans-serif;
+
+
     background-color: var(--color-w-bg);
     height: 100vh;
+
+    color: var(--color-secondary-font);
+
+    .container_width {
+        max-width: 900px;
+        margin: 0 auto;
+
+        border-left: 1px solid red;
+        border-right: 1px solid red;
+    }
 }
 
-.registr_container_dark{
-    background-color: var(--color-main-bg);
-}
+
 
 
 @media screen and (min-width:60px) and (max-width:770px){

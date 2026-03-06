@@ -6,6 +6,7 @@ import React from "react";
 import {store} from "./Store/store.ts";
 import Field from "./Field/Field.tsx";
 import Battlefield from "./Field/BattleField/Battlefield.tsx";
+import Userwind from "./Field/Userwind/Userwind.tsx";
 
 const router = createBrowserRouter([
     {
@@ -18,10 +19,10 @@ const router = createBrowserRouter([
                 // index,
                 element: <Battlefield/>
             },
-            // {
-            //     path:"/login",
-            //     element: <LogInWind/>
-            // },
+            {
+                path:"/user",
+                element: <Userwind/>
+            },
         ]
     },
     // {
