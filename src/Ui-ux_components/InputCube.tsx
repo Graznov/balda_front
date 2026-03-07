@@ -5,10 +5,11 @@ interface forInputCube {
     maxlength:number;
     name?: string;
     type?: string;
+    onChange: (event: React.ChangeEvent<HTMLInputElement>, ind?:number) => void
 }
 
 function InputCube({
-    className, maxlength, type, name, value
+    className, maxlength, type, name, value, onChange
                    } : forInputCube){
 
     return (
@@ -17,7 +18,8 @@ function InputCube({
             type={type}
             maxLength={maxlength}
             name={name}
-            value={value}/>
+            value={value}
+            onChange={onChange}/>
     )
 }
 
