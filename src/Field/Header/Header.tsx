@@ -22,9 +22,9 @@ function Header(){
                     </li>
                     <li>
                         <LinkCastom
-                            Link_path={'/'}
+                            Link_path={'/addword'}
                             Link_ClassName={linksStyle}
-                            Link_text={'Two'}/>
+                            Link_text={'Add word'}/>
                     </li>
                     <li>
                         <LinkCastom

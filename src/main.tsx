@@ -7,6 +7,7 @@ import {store} from "./Store/store.ts";
 import Field from "./Field/Field.tsx";
 import Battlefield from "./Field/BattleField/Battlefield.tsx";
 import Userwind from "./Field/Userwind/Userwind.tsx";
+import AddWord from "./Field/AddWord/AddWord.tsx";
 
 const router = createBrowserRouter([
     {
@@ -14,10 +15,21 @@ const router = createBrowserRouter([
         element: <Field/>,
         // errorElement:<ErrorPage/>,
         children:[
+
             {
-                path:"/playarea",
+                path:"playarea",
                 // index,
-                element: <Battlefield/>
+                element: <Battlefield/>,
+                children:[
+                    {
+                        index: true, // Это будет отображаться на /playarea
+                        element: <div>Добро пожаловать в PlayArea! (или ваш компонент по умолчанию)</div>
+                    },
+                    {
+                        path:"addword",
+                        element: <AddWord/>,
+                    },
+                ]
             },
             {
                 path:"/user",

@@ -1,7 +1,10 @@
 import style from './battlefield.module.css'
 import classNames from "classnames/bind";
-import InputCube from "../../Ui-ux_components/InputCube.tsx";
+import InputCastom from "../../Ui-ux_components/InputCastom.tsx";
 import {useEffect, useState} from "react";
+import {Outlet} from "react-router-dom";
+import LinkCastom from "../../Ui-ux_components/LinkCastom.tsx";
+import AddWord from "../AddWord/AddWord.tsx";
 
 const cx = classNames.bind(style)
 
@@ -10,6 +13,7 @@ const cx = classNames.bind(style)
 function Battlefield(){
 
 
+    const linksStyle = cx('link')
 
     const inputClass = cx('inputCube')
 
@@ -34,47 +38,54 @@ function Battlefield(){
     return (
         <div className={cx('battlefield')}>
 
+            <LinkCastom
+                Link_path={'addword'}
+                Link_ClassName={linksStyle}
+                Link_text={'Add word'}/>
+
+            <Outlet/>
+
 
             <div className={cx('battlefield_cube')}>
                 {/*<div className={cx('battlefield_cube_lineOne')}>*/}
-                {/*    <InputCube className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCube className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCube className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCube className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCube className={inputClass} maxlength={1}/>*/}
+                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
+                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
+                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
+                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
+                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
                 {/*</div>*/}
                 {/*<div className={cx('battlefield_cube_lineOne')}>*/}
-                {/*    <InputCube className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCube className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCube className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCube className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCube className={inputClass} maxlength={1}/>*/}
+                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
+                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
+                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
+                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
+                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
                 {/*</div>*/}
                 {/*<div className={cx('battlefield_cube_lineOne')}>*/}
-                {/*    <InputCube className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCube className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCube className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCube className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCube className={inputClass} maxlength={1}/>*/}
+                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
+                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
+                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
+                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
+                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
                 {/*</div>*/}
                 {/*<div className={cx('battlefield_cube_lineOne')}>*/}
-                {/*    <InputCube className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCube className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCube className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCube className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCube className={inputClass} maxlength={1}/>*/}
+                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
+                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
+                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
+                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
+                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
                 {/*</div>*/}
                 {/*<div className={cx('battlefield_cube_lineOne')}>*/}
-                {/*    <InputCube className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCube className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCube className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCube className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCube className={inputClass} maxlength={1}/>*/}
+                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
+                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
+                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
+                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
+                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
                 {/*</div>*/}
 
                 {
                     letters.map((item, index) =>
-                        <InputCube
+                        <InputCastom
                             key={index}
                             className={inputClass}
                             maxlength={1}

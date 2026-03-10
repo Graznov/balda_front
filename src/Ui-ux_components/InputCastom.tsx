@@ -8,7 +8,7 @@ interface forInputCube {
     onChange: (event: React.ChangeEvent<HTMLInputElement>, ind?:number) => void
 }
 
-function InputCube({
+function InputCastom({
     className, maxlength, type, name, value, onChange
                    } : forInputCube){
 
@@ -23,4 +23,4 @@ function InputCube({
     )
 }
 
-export default InputCube;
+export default InputCastom;
