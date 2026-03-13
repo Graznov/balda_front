@@ -20,6 +20,10 @@
 
     }
 
+    .inputCube:hover{
+        background: #3c3836;
+    }
+
     .inputCube:focus {
         outline: none;
     }
@@ -27,9 +31,6 @@
 
     .battlefield_cube_lineOne{
         display: flex;
-
-
-
 
 
         .inputCube{

@@ -14,13 +14,15 @@ function ButtonCastom({
                  ClassNameBtn,
                  type,
                  Click,
+                 disabled,
              }:forButtonCastom){
 
     return(
         <button
             className={ClassNameBtn}
             onClick={Click}
-            type={type}>
+            type={type}
+            disabled={disabled}>
             {Btn_text}
         </button>
     )

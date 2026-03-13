@@ -2,7 +2,7 @@ import style from './battlefield.module.css'
 import classNames from "classnames/bind";
 import InputCastom from "../../Ui-ux_components/InputCastom.tsx";
 import {useEffect, useState} from "react";
-import {Outlet} from "react-router-dom";
+import {Outlet, useNavigate} from "react-router-dom";
 import LinkCastom from "../../Ui-ux_components/LinkCastom.tsx";
 import AddWord from "../AddWord/AddWord.tsx";
 import {useAppDispatch, useAppSelector} from "../../Store/hooks.ts";
@@ -13,11 +13,28 @@ const cx = classNames.bind(style)
 function Battlefield(){
 
     const dispatch = useAppDispatch()
+    const navigate = useNavigate()
 
     const list = useAppSelector(state => state.defSlice.letersField)
 
-    const linksStyle = cx('link')
-    const inputClass = cx('inputCube')
+    const startWord = useAppSelector(state => state.defSlice.startWord)
+
+    useEffect(()=>{
+        console.log(`startWord: ${startWord}`)
+
+        if(startWord.length) {
+            navigate('/playarea/game')
+        } else {
+            navigate('/playarea/addword')
+        }
+    },[startWord])
+
+
+
+
+    //
+    // const linksStyle = cx('link')
+    // const inputClass = cx('inputCube')
 
     const [letters, setLetters] = useState(list)
 
@@ -42,59 +59,6 @@ function Battlefield(){
 
             <Outlet/>
 
-
-
-            <div className={cx('battlefield_cube')}>
-                {/*<div className={cx('battlefield_cube_lineOne')}>*/}
-                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
-                {/*</div>*/}
-                {/*<div className={cx('battlefield_cube_lineOne')}>*/}
-                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
-                {/*</div>*/}
-                {/*<div className={cx('battlefield_cube_lineOne')}>*/}
-                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
-                {/*</div>*/}
-                {/*<div className={cx('battlefield_cube_lineOne')}>*/}
-                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
-                {/*</div>*/}
-                {/*<div className={cx('battlefield_cube_lineOne')}>*/}
-                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
-                {/*    <InputCastom className={inputClass} maxlength={1}/>*/}
-                {/*</div>*/}
-
-                {/*{*/}
-                {/*    letters.map((item, index) =>*/}
-                {/*        <InputCastom*/}
-                {/*            key={index}*/}
-                {/*            className={inputClass}*/}
-                {/*            maxlength={1}*/}
-                {/*            onChange={changeValue(index)}*/}
-                {/*            />*/}
-                {/*    )*/}
-                {/*}*/}
-
-
-
-            </div>
 
         </div>
     )

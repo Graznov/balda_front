@@ -25,7 +25,11 @@ const router = createBrowserRouter([
                     {
                         index: true, // Это будет отображаться на /playarea
                         // path:"addword",
-                        element: <AddWord/>,
+                        element: <div>Заглушка</div>,
+                    },
+                    {
+                      path:'addword',
+                      element: <AddWord/>,
                     },
                     {
                         path:"game",
