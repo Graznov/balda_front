@@ -1,49 +1,62 @@
 import {createSlice} from '@reduxjs/toolkit'
-//
-// export interface Task {
-//     id: string,
-//     title: string,
-//     description: string,
-//     dueDate: string,
-//     category: string,
-//     color: string,
-//     isCompleted: boolean,
-//
-// }
-// export interface Note {
-//     id: string,
-//     title: string,
-//     description: string,
-//     addDate: string,
-//     lastRedactDate: string,
-//     color: string,
-//     deg:number
-// }
-// export interface TaskState{
-//     // noteWindRedactVisible: any
-//     tasks:Task[],
-//     notes:Note[],
-//     name:string,
-//     email:string,
-//     creatDat:string,
-//     // token:string,
-//     accessToken:string|undefined
-//     id:string,
-//     pathImg:string,
-//     redactedNote: undefined | Note
-// }
 
+interface gameData {
+    gameId: string,
+    letersField:Array<string>,
+    playerOne:{ //данные игроков
+        idPlayer:string, //глобальный id игрока из бд
+        avaPlayer:string, //ссылка на аватарку
+        rating:string, //рейтинг игрока
+        startWord:{
+            status:boolean, //задает стартовое слово
+            word:string|null,//стартовое слово
+        }
+        counterLetter:number|null, //счетчик букв игровой сессии
+        words:Array<string>,//слова данной игровой сессии
+        askWord:boolean, //запрос согласия соперника на выбранное слово
+    },
+    playerTwo:{
+        idPlayer:string,
+        avaPlayer:string,
+        rating:string,
+        startWord:{
+            status:boolean,
+            word:string|null,
+        }
+        counterLetter:number|null,
+        words:Array<string>,
+        askWord:boolean,
+    },
+
+}
 
 const initialState = {
-    tasks:[],
-    notes:[],
-    name: "",
-    email: "",
-    creatDat: "",
-    accessToken: undefined,
-    id:"",
-    pathImg:'',
-    redactedNote: undefined,
+    gameId: 'string',
+    letersField:[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ','Б', 'А', 'Л', 'Д', 'А',' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ',],
+    playerOne:{ //данные игроков
+        idPlayer:'1', //глобальный id игрока из бд
+        avaPlayer:'string', //ссылка на аватарку
+        rating:'string', //рейтинг игрока
+        startWord:{
+            status:true, //задает стартовое слово
+            word:'',//стартовое слово
+        },
+        counterLetter:0, //счетчик букв игровой сессии
+        words:[],//слова данной игровой сессии
+        askWord:false, //запрос согласия соперника на выбранное слово
+    },
+    playerTwo:{
+        idPlayer:'2',
+        avaPlayer:'string',
+        rating:'string',
+        startWord:{
+            status:false,
+            word:null,
+        },
+        counterLetter:0,
+        words:[],
+        askWord:false,
+    },
 }
 
 const defSlice = createSlice({

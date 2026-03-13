@@ -6,6 +6,7 @@ interface forInputCube {
     name?: string;
     type?: string;
     onChange: (event: React.ChangeEvent<HTMLInputElement>, ind?:number) => void
+    onKeyDown?: (event: React.KeyboardEvent<HTMLInputElement>) => void
 }
 
 function InputCastom({
@@ -19,7 +20,8 @@ function InputCastom({
             maxLength={maxlength}
             name={name}
             value={value}
-            onChange={onChange}/>
+            onChange={onChange}
+        />
     )
 }
 

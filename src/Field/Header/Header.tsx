@@ -20,12 +20,12 @@ function Header(){
                             Link_ClassName={linksStyle}
                             Link_text={'Start'}/>
                     </li>
-                    <li>
-                        <LinkCastom
-                            Link_path={'/addword'}
-                            Link_ClassName={linksStyle}
-                            Link_text={'Add word'}/>
-                    </li>
+                    {/*<li>*/}
+                    {/*    <LinkCastom*/}
+                    {/*        Link_path={'/playarea/addword'}*/}
+                    {/*        Link_ClassName={linksStyle}*/}
+                    {/*        Link_text={'Add word'}/>*/}
+                    {/*</li>*/}
                     <li>
                         <LinkCastom
                             Link_path={'/'}

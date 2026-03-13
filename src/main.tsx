@@ -8,6 +8,7 @@ import Field from "./Field/Field.tsx";
 import Battlefield from "./Field/BattleField/Battlefield.tsx";
 import Userwind from "./Field/Userwind/Userwind.tsx";
 import AddWord from "./Field/AddWord/AddWord.tsx";
+import Battlearea from "./Field/BattleField/Battlearea/Battlearea.tsx";
 
 const router = createBrowserRouter([
     {
@@ -23,11 +24,12 @@ const router = createBrowserRouter([
                 children:[
                     {
                         index: true, // Это будет отображаться на /playarea
-                        element: <div>Добро пожаловать в PlayArea! (или ваш компонент по умолчанию)</div>
+                        // path:"addword",
+                        element: <AddWord/>,
                     },
                     {
-                        path:"addword",
-                        element: <AddWord/>,
+                        path:"game",
+                        element: <Battlearea/>,
                     },
                 ]
             },
