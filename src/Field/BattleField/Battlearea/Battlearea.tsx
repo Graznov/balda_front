@@ -14,6 +14,9 @@ function Battlearea() {
     const dispatch = useAppDispatch()
 
     const list = useAppSelector(state => state.defSlice.letersField)
+    const playerOne = useAppSelector(state => state.defSlice.playerOne)
+    const playerTwo = useAppSelector(state => state.defSlice.playerTwo)
+
 
     const inputClass = cx('inputCube',{
         'inputCube_gray':true
@@ -44,7 +47,31 @@ function Battlearea() {
 
         <div className={cx('battlefield')}>
 
-            <button onClick={pushed}>PushMe</button>
+            {/*<button onClick={pushed}>Home</button>*/}
+
+            <div className={cx('battlefield_Player')}>
+                <div className={cx('battlefield_Player_Data')}>
+
+                    <div className={cx('battlefield_Player_Data_Avatar')}>
+                        <img src={playerOne.avaPlayer} alt="img"/>
+                    </div>
+
+                    <div className={cx('battlefield_Player_Data_Name')}>
+                        {playerOne.name}
+                    </div>
+
+
+                    <div className={cx('battlefield_Player_Data_Rating')}>
+                        {playerOne.rating}
+                    </div>
+
+                </div>
+
+                <div className={cx('battlefield_Player_Words')}>
+
+
+                </div>
+            </div>
 
             <div className={cx('battlefield_cube')}>
                 {
@@ -60,6 +87,31 @@ function Battlearea() {
                         />
                     )
                 }
+            </div>
+
+            <div className={cx('battlefield_Player')}>
+                <div className={cx('battlefield_Player_Data')}>
+
+                    <div className={cx('battlefield_Player_Data_Avatar')}>
+                        <img src={playerTwo.avaPlayer} alt="img"/>
+                    </div>
+
+                    <div className={cx('battlefield_Player_Data_Name')}>
+                        {playerTwo.name}
+                    </div>
+
+
+
+                    <div className={cx('battlefield_Player_Data_Rating')}>
+                        {playerTwo.rating}
+                    </div>
+
+                </div>
+
+                <div className={cx('battlefield_Player_Words')}>
+
+
+                </div>
             </div>
         </div>
     )

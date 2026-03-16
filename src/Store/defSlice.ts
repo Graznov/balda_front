@@ -6,6 +6,7 @@ interface gameData {
     startWord:string,//стартовое слово
     playerOne:{ //данные игроков
         idPlayer:string, //глобальный id игрока из бд
+        name: string,
         avaPlayer:string, //ссылка на аватарку
         rating:string, //рейтинг игрока
         // startWord:{
@@ -19,6 +20,7 @@ interface gameData {
     },
     playerTwo:{
         idPlayer:string,
+        name: string,
         avaPlayer:string,
         rating:string,
         // startWord:{
@@ -39,8 +41,9 @@ const initialState = {
     startWord:'',//стартовое слово
     playerOne:{ //данные игроков
         idPlayer:'1', //глобальный id игрока из бд
-        avaPlayer:'string', //ссылка на аватарку
-        rating:'string', //рейтинг игрока
+        name: 'JD Wans',
+        avaPlayer:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCnixZ5tf8EcJ1alrDc67ATX7tyY87zrBsBw&s', //ссылка на аватарку
+        rating:'Лопух', //рейтинг игрока
         // startWord:{
         //     status:true, //задает стартовое слово
         //     word:'',//стартовое слово
@@ -52,8 +55,9 @@ const initialState = {
     },
     playerTwo:{
         idPlayer:'2',
-        avaPlayer:'string',
-        rating:'string',
+        name: 'С.В. Лавров',
+        avaPlayer:'https://www.perunica.ru/uploads/posts/2019-03/1552932077_1.jpg',
+        rating:'Задрот',
         // startWord:{
         //     status:false,
         //     word:null,
