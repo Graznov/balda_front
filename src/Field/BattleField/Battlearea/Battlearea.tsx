@@ -1,6 +1,6 @@
 import InputCastom from "../../../Ui-ux_components/InputCastom.tsx";
 import {useAppDispatch, useAppSelector} from "../../../Store/hooks.ts";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import style from './battlearea.module.css'
 import classNames from "classnames/bind";
 import {useNavigate} from "react-router-dom";
@@ -36,18 +36,10 @@ function Battlearea() {
         console.log(letters)
     }
 
-    const pushed = ()=>{
-        console.log('Pushed')
-        navigate('/')
-    }
-
-
-
     return (
 
         <div className={cx('battlefield')}>
 
-            {/*<button onClick={pushed}>Home</button>*/}
 
             <div className={cx('battlefield_Player')}>
                 <div className={cx('battlefield_Player_Data')}>
@@ -55,6 +47,7 @@ function Battlearea() {
                     <div className={cx('battlefield_Player_Data_Avatar')}>
                         <img src={playerOne.avaPlayer} alt="img"/>
                     </div>
+
 
                     <div className={cx('battlefield_Player_Data_Name')}>
                         {playerOne.name}
@@ -68,6 +61,7 @@ function Battlearea() {
                 </div>
 
                 <div className={cx('battlefield_Player_Words')}>
+
 
 
                 </div>

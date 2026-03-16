@@ -4,6 +4,31 @@
 
     .battlefield_Player{
 
+        .battlefield_Player_Data{
+            display: flex;
+            flex-direction: column;
+            .battlefield_Player_Data_Avatar{
+                img{
+                    width: 95px;
+                    height: 95px;
+                    border-radius: 50%;
+                }
+                text-align: center;
+            }
+            .battlefield_Player_Data_Name{
+                font-weight: bold;
+                font-size: 33px;
+            }
+            .battlefield_Player_Data_Rating{
+                text-align: center;
+                background: #59de59;
+                padding: 5px;
+                border-radius: 15px;
+            }
+
+
+        }
+
     }
 
 
