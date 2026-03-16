@@ -8,12 +8,31 @@
             display: flex;
             flex-direction: column;
             .battlefield_Player_Data_Avatar{
+                /*....*/
+                width: 60px;
+                height: 60px;
+                border-radius: 20px;
+                /* Эффект матового стекла */
+                backdrop-filter: blur(10px);
+                background: rgba(255, 255, 255, 0.15); /* Полупрозрачный белый */
+                border: 1px solid rgba(255, 255, 255, 0.3); /* Светлая обводка */
+                box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+                padding: 3px; /* Отступ для "воздуха" */
+
                 img{
-                    width: 95px;
-                    height: 95px;
-                    border-radius: 50%;
+
+
+
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 17px; /* Скругляем под форму контейнера */
+                    object-fit: cover;
+                    display: block;
                 }
-                text-align: center;
+                /*text-align: center;*/
+            }
+            .battlefield_Player_Data_Avatar:hover img {
+                transform: scale(1.05);
             }
             .battlefield_Player_Data_Name{
                 font-weight: bold;
