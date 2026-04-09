@@ -1,6 +1,7 @@
 import {createSlice} from '@reduxjs/toolkit'
 
 interface gameData {
+    isEntered: boolean,
     gameId: string,
     letersField:Array<string>,
     startWord:string,//стартовое слово
@@ -36,6 +37,7 @@ interface gameData {
 }
 
 const initialState = {
+    isEntered: false,
     gameId: 'string',
     letersField:['', '', '', '', '', '', '', '', '', '','', '', '', '', '','', '', '', '', '','', '', '', '', '',],
     startWord:'',//стартовое слово

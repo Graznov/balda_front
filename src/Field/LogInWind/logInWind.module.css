@@ -32,202 +32,184 @@
     --color-gray-font: gray;
 }
 
-.containerLogIn{
-    .input_area_Zag{
-        width: 80%;
-        margin: 10px auto;
-        font-family: "Inter", sans-serif;
-        font-size: 25px;
-        font-weight: 600;
-        color: var(--color-primary-font);
-    }
-    .input_area_Zag_dark{
-        color: var(--color-primary-font);
-    }
+/*@import url(https://fonts.googleapis.com/css?family=Roboto:300);*/
 
-    .input_area{
-        /*position: absolute;*/
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        justify-content: flex-end;
-        margin-bottom: 100px;
+.login-page {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
 
-        .classInputBtn{
-            border: none;
-            background:none;
-            position: absolute;
-            cursor: pointer;
-            top: 14px;
-            right: 10px;
-            img{
-                /*width: 10px;*/
-            }
-        }
+    position: relative;
 
-        .classNameContainer {
-            position: relative;
-            width: 80%;
-            margin: 5px auto;
-            color: #e8e5e5;
-
-            .classNameInput,
-            .classNameInputEmail,
-            .classNameInputPass,
-            .classNameInputPassTwo{
-                font-family: "Exo 2", sans-serif;
-                font-style: normal;
-                font-size: 16px;
-
-                background-color: var(--color-w-bg);
-                border: 1px solid var(--color-primary-font);
-                border-radius: 5px;
-                box-sizing: border-box;
-                color: var(--color-primary-font);
-                line-height: 16px;
-                height: 50px;
-                outline: 0;
-                padding: 0 20px;
-                width: 100%;
-                transition: 0.3s;
-            }
-            .classNameInput_dark{
-                border: 1px solid var(--color-primary-font);
-
-                background-color: var(--color-main-bg);
-                color: var(--color-primary-font);
-            }
-            .classNameInput_red{
-                border: 1px solid #f80101;
-                /*background-color: #dc4949;*/
-            }
-            .classNameLabel,
-            .classNameLabelEmail,
-            .classNameLabelPass,
-            .classNameLabelPassTwo{
-                color: var(--color-primary-font);
-                font-family: Verdana, sans-serif;
-                background-color: var(--color-w-bg);
-                font-size: 16px;
-                line-height: 16px;
-                padding: 5px 10px;
-                pointer-events: none;
-                position: absolute;
-                transition: all 400ms;
-                top: 12px;
-                left: 10px;
-            }
-            .classNameLabel_black{
-                color: var(--color-primary-font);
-
-                background: var(--color-main-bg);
-            }
-            .classNameLabel_red{
-                color: #f80101;
-            }
-            .classNameInput:focus + .classNameLabel,
-            .classNameInput:not(:placeholder-shown) + .classNameLabel,
-            .classNameInputEmail:focus + .classNameLabelEmail,
-            .classNameInputEmail:not(:placeholder-shown) + .classNameLabelEmail,
-            .classNameInputPass:focus + .classNameLabelPass,
-            .classNameInputPass:not(:placeholder-shown) + .classNameLabelPass,
-            .classNameInputPassTwo:focus + .classNameLabelPassTwo,
-            .classNameInputPassTwo:not(:placeholder-shown) + .classNameLabelPassTwo{
-                top: -10px;
-                left: 10px;
-                font-size: 15px;
-                /*background-color: #BFE2FF;*/
-                padding: 2px 3px;
-            }
-
-        }
-
-    }
-    .classNameBtn{
-        background:  var(--color-w-btn);
-        color: var(--color-w-font);
-        /*padding: 20px;*/
-        font-family: "Exo 2", sans-serif;
-        font-size: 21px;
-        width: 80%;
-        margin: 0 auto;
-        padding: 12px 0;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    .classNameBtn_dark{
-        background: var(--color-primary);
-        color: var(--color-header-bg);
-    }
-
-    .classNameBtnDiss:disabled{
-        opacity: 0.5;
-    }
-    .classNameBtnDiss_dark:disabled{
-        opacity: 0.9;
-    }
-
-    .classNameBtnDiss:disabled{
-        opacity: 0.5;
-    }
-
-
-    .classNameBtn:hover{
-        color: #faf7f7;
-        background: var(--color-w-btn_hover);
-    }
-    .classNameBtn_dark:hover{
-        background: var(--color-primary-hover);
-        color: var(--color-search-bg);
-    }
-    .classNameBtn:active{
-        box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-    .classNameBtnDiss:disabled, .classNameBtnDiss:hover:disabled {
-        background-color: rgba(0,0,0,.1);
-        border: 1px solid rgba(0, 0, 0, .1);
-        cursor: not-allowed;
-    }
-    .classNameBtnDiss:disabled, .classNameBtnDiss:active:disabled{
-        box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-
-    .ClassDivError{
-        color: #f80101;
-        font-size: 15px;
-        position: absolute;
-        right: 10px;
-        top: 30px;
-        display: none;
-        transition: 0.3s;
-
-    }
-    .ClassDivErrorVisibl{
-        display: flex;
-        justify-content: flex-end;
-
-    }
-
-    .toLogin{
-        width: 80%;
-        margin: 10px auto;
+    .form {
+        position: relative;
+        z-index: 1;
+        background: #FFFFFF;
+        max-width: 360px;
+        margin: 0 auto 100px;
+        padding: 45px;
         text-align: center;
-        color: var(--color-primary-font);
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+        input {
+            font-family: "Roboto", sans-serif;
+            outline: 0;
+            background: #f2f2f2;
+            width: 100%;
+            border: 0;
+            margin: 0 0 15px;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        .error{
+            background: rgba(255, 0, 0, 0.3);
+        }
+
+        .error-name{
+            background: rgba(255, 0, 0, 0.3);
+        }
+        .error-email{
+            background: rgba(255, 0, 0, 0.3);
+        }
+
+        .login-form_passContainer{
+            position: relative;
+
+            .pass-visible-switch{
+                position: absolute;
+                border: none;
+                background: none;
+                right: 0;
+            }
+
+            .passTwo-red{
+                background: rgba(255, 0, 0, 0.4);
+            }
+        }
+
+        .form-button {
+            font-family: "Roboto", sans-serif;
+            text-transform: uppercase;
+            outline: 0;
+            background: var(--color-w-btn);
+            width: 100%;
+            border: 0;
+            padding: 15px;
+            color: #FFFFFF;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .form-button:hover {
+            background: var(--color-w-btn_hover);
+        }
+
+        .message{
+            display: flex;
+            margin: 15px 0 0;
+            color: #b3b3b3;
+            font-size: 12px;
+            justify-content: center;
+        }
+
+        .message button {
+            color: #4CAF50;
+            border: none;
+            font-size: 12px;
+            cursor: pointer;
+            background: none;
+        }
+
+        .login-form_none{
+            display: none;
+        }
+
+        .register-form {
+            /*display: none;*/
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            transition: opacity 0.9s ease, height 0.3s ease;
+
+        }
+
+        .register-form_show{
+            /*display: block;*/
+
+            opacity: 1;
+            height: auto; /* Или фиксированная высота, например 300px */
+        }
+    }
+    .zachem{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: none;
+        border: none;
+        padding: 5px;
+        cursor: pointer;
+        color: #7a7a79;
+    }
+    .zachem:hover{
+        /*border-bottom: 1px solid black;*/
+    }
+    .zachem:active{
+        color: black;
     }
 
-    .toLogin_dark{
-        color: var(--color-primary-font);
-        a{
-            color: var(--color-secondary);
+    .zachem-text{
+        display: none;
+        font-family: Roboto, sans-serif;
+        font-size: 19px;
+        position: absolute;
+        width: 100%;
+        height: max-content;
+        top: 0;
+        bottom: 0;
+        z-index: 10;
+        border: 1px solid black;
+        padding: 35px 5px 5px 5px;
+        background: rgba(122,122,121, 0.9);
+
+        .zachem-text_title{
+            text-transform: capitalize;
+            font-weight: 600;
         }
-        a:hover{
-            color: var(--color-secondary-hover);
+        .zachem-text_content{
+            font-size: 17px;
+            margin: 5px 0 0 15px;
+        }
+        .zachem-text_content:before{
+            content: "-";
+            position: absolute;
+            left: 5px;
+        }
+        .zachem-text_content_cookie{
+            margin-top: 7px;
+            font-size: 18px;
+        }
+
+        button{
+            position: absolute;
+            top: 1px;
+            right: 1px;
+            padding: 0;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            background: none;
+            border: none;
+        }
+        button *{
+            width: 30px;
+            height: 30px;
+            fill: black;
         }
     }
-
-
-
+    .zachem-text_visible{
+        display: block;
+    }
 }
-
