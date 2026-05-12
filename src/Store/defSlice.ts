@@ -43,7 +43,7 @@ const initialState = {
     startWord:'',//стартовое слово
     playerOne:{ //данные игроков
         idPlayer:'1', //глобальный id игрока из бд
-        name: 'JD Wans',
+        name: '',
         avaPlayer:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCnixZ5tf8EcJ1alrDc67ATX7tyY87zrBsBw&s', //ссылка на аватарку
         rating:'Лопух', //рейтинг игрока
         // startWord:{

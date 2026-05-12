@@ -106,6 +106,15 @@
         .form-button:hover {
             background: var(--color-w-btn_hover);
         }
+        .form-button_disabled{
+            background: gray;
+
+        }
+        .form-button_disabled:hover{
+            background: #5d5c5c;
+            color: #918b8b;
+            cursor: auto;
+        }
 
         .message{
             display: flex;
