@@ -1,0 +1,49 @@
+.message{
+    position: absolute;
+
+    gap: 1rem;
+    bottom: 15px;
+    right: 10px;
+    width:300px;
+    min-height:100px;
+    background: rgba(107,103,103,.5);
+
+    padding:5px;
+    border-radius: 10px;
+    border: #504f4f 3px solid;
+    display: flex;
+    align-items: center;
+
+    .message_content{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        .message_content_top{
+            font-size: 25px;
+            color: #00040c;
+        }
+
+        .message_content_text{
+            font-size: 17px;
+            color: #00040c;
+        }
+
+    }
+
+}
+.message::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -8px; /* Выносим за пределы основного блока */
+    width: 20px;
+    height: 20px;
+    background-color: #55aaff;
+
+    /* Магия формы хвостика через mask или clip-path */
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    /* Чтобы хвостик плавно выходил из блока, можно немного подправить радиус */
+    border-bottom-right-radius: 10px;
+}

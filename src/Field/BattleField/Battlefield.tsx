@@ -6,6 +6,7 @@ import {Outlet, useNavigate} from "react-router-dom";
 import LinkCastom from "../../Ui-ux_components/LinkCastom.tsx";
 import AddWord from "../AddWord/AddWord.tsx";
 import {useAppDispatch, useAppSelector} from "../../Store/hooks.ts";
+import Message from "../message/Message.tsx";
 
 const cx = classNames.bind(style)
 
@@ -58,6 +59,7 @@ function Battlefield(){
         <div className={cx('battlefield')}>
 
             <Outlet/>
+
 
 
         </div>
