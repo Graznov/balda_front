@@ -6,6 +6,8 @@ import {useEffect, useMemo, useState} from "react";
 import Eye from '/src/assets/eye.svg?react'
 // import Close from '/src/assets/close.svg?react'
 import EyeHidden from '/src/assets/eye-hidden.svg?react'
+import {setDataMessage, setResetMessage} from "../../Store/messageSlise.ts";
+import {useDispatch} from "react-redux";
 // import {useNavigate} from "react-router-dom";
 // import {useAppDispatch} from "../../../Store/hooks.ts";
 
@@ -22,6 +24,8 @@ export const LogInWind = () => {
     //     name: string;
     //     password: string;
     // }
+
+    const dispatch = useDispatch();
     const userDataSTOK={
         name:'',
         password1:'',
@@ -80,6 +84,16 @@ export const LogInWind = () => {
                                 ...userData,
                                 name: name
                             })
+
+                            // dispatch(setDataMessage({
+                            //     messageStatus:true,
+                            //     messageHead: 'Регистрация',
+                            //     messageText: 'Длинна имени и пароля должны быть не менее шести символов',
+                            //     messageType:"info",}))
+                            //
+                            // setTimeout(()=>{
+                            //     dispatch(setResetMessage())
+                            // },3000)
 
                             console.log(event.target.value);
                         }}
@@ -147,10 +161,22 @@ export const LogInWind = () => {
                     <button
                         onClick={()=>{
                             console.log(`click CREATE,\nUserName: ${userData.name},\nUserPassword: ${userData.password1}`);
+                            if(userData.name.length<6 || userData.password1.length<6){
+                                dispatch(setDataMessage({
+                                    messageStatus:true,
+                                    messageHead: 'Error registr',
+                                    messageText: 'Длинна имени и пароля должны быть не менее шести символов',
+                                    messageType:"error",}))
+
+                                // setTimeout(()=>{
+                                //     dispatch(setResetMessage())
+                                // },3000)
+                            }
+
                         }}
-                        disabled={btnDisable}
+                        // disabled={btnDisable}
                         className={cx('form-button',{
-                            'form-button_disabled':btnDisable
+                            // 'form-button_disabled':btnDisable
                         })}>
                         создать
                     </button>
@@ -213,10 +239,21 @@ export const LogInWind = () => {
                     <button
                         onClick={()=>{
                             console.log(`click ENTER,\nUserName: ${userData.name},\nUserPassword: ${userData.password1}`);
+                            if(userData.name.length<6 || userData.password1.length<6){
+                                dispatch(setDataMessage({
+                                    messageStatus:true,
+                                    messageHead: 'Error enter',
+                                    messageText: 'Длинна имени и пароля должны быть не менее шести символов',
+                                    messageType:"error",}))
+
+                                // setTimeout(()=>{
+                                //     dispatch(setResetMessage())
+                                // },3000)
+                            }
                         }}
-                        disabled={btn2Disable}
+                        // disabled={btn2Disable}
                         className={cx('form-button',{
-                            'form-button_disabled':btn2Disable
+                            // 'form-button_disabled':btn2Disable
 
                         })}>Войти
                     </button>
