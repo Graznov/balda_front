@@ -239,23 +239,37 @@ export const LogInWind = () => {
                     <button
                         onClick={()=>{
                             console.log(`click ENTER,\nUserName: ${userData.name},\nUserPassword: ${userData.password1}`);
-                            if(userData.name.length<6 || userData.password1.length<6){
+                            if(!userData.name.length || !userData.password1.length) {
                                 dispatch(setDataMessage({
                                     messageStatus:true,
                                     messageHead: 'Error enter',
-                                    messageText: 'Длинна имени и пароля должны быть не менее шести символов',
+                                    messageText: 'Поля не должны быть пустыми',
                                     messageType:"error",}))
 
                                 // setTimeout(()=>{
                                 //     dispatch(setResetMessage())
                                 // },3000)
-                            }
+
+                            } else if(userData.name.length<6 || userData.password1.length<6){
+
+                                dispatch(setDataMessage({
+                                        messageStatus:true,
+                                        messageHead: 'Error enter',
+                                        messageText: 'Длинна имени и пароля должны быть не менее шести символов',
+                                        messageType:"error",}))
+
+                                    // setTimeout(()=>{
+                                    //     dispatch(setResetMessage())
+                                    // },3000)
+                                }
+
                         }}
-                        // disabled={btn2Disable}
                         className={cx('form-button',{
                             // 'form-button_disabled':btn2Disable
 
-                        })}>Войти
+                        })}
+                        // disabled={btn2Disable}
+                        >Войти
                     </button>
                     <p className={cx("message")}>
                         Нет аккаунта?

@@ -4,7 +4,7 @@ interface message {
     messageStatus: boolean,
     messageHead:string|null,
     messageText:string|null,
-    messageType:'info'|'error'
+    messageType:'info'|'error'|null
 }
 
 const initialState:message = {

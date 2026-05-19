@@ -15,11 +15,12 @@ function Message() {
     console.log(`data: `, data)
 
     useEffect(() => {
+
         if(data.messageType)
             setTimeout(()=>{
                 dispatch(setResetMessage())
             },3000)
-    }, [data.messageText]);
+    }, [data.messageType]);
 
     return(
         <div className={cx('message', {
